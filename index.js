@@ -38,7 +38,8 @@ function calculate() {
         if (display.value.trim() === "") {
             throw new Error("Empty input");
         }
-        display.value = eval(display.value); // eval is like a calc
+        // safely evaluate the expression
+        display.value = new Function('return ' + display.value)();
     } catch (error) {
         display.value = "error";
     }
