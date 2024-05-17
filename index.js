@@ -9,7 +9,7 @@ function appendToDisplay(input) {
         return;
     }
 
-    // prevent \ from being added at all
+    // prevent \ from being added at all.
     if (input === '\\') {
         return;
     }
