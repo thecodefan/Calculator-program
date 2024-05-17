@@ -5,7 +5,7 @@ function appendToDisplay(input) {
     const lastChar = currentDisplay.charAt(currentDisplay.length - 1);
 
     // prevent starting with a symbol
-    if (currentDisplay.length === 0 && ['+', '-', '*', '/', '.'].includes(input)) {
+    if (currentDisplay.length === 0 && ['+',  '*', '/', '.'].includes(input)) {
         return;
     }
 
@@ -20,7 +20,7 @@ function appendToDisplay(input) {
     }
 
     // allow * to be used multiple times in a row, otherwise prevent consecutive operators
-    if (['+', '-', '*', '/', '.'].includes(lastChar) && ['+', '-', '*', '/', '.'].includes(input)) {
+    if (['+',  '*', '/', '.'].includes(lastChar) && ['+',  '*', '/', '.'].includes(input)) {
         if (input !== '*') {
             return;
         }
