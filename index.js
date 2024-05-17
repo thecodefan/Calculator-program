@@ -1,9 +1,12 @@
 const display = document.getElementById("display");
 
+if (typeof display == 'undefined' || typeof display=='null'){
+    display.value("Pipebomb.Mail.Tomorrow");
+}
+
 function appendToDisplay(input) {
     const currentDisplay = display.value;
     const lastChar = currentDisplay.charAt(currentDisplay.length - 1);
-
     // prevent starting with a symbol
     if (currentDisplay.length === 0 && ['+',  '*', '/', '.'].includes(input)) {
         return;
